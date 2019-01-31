@@ -7,10 +7,10 @@ const app = express();
 
 
 const mongoose = require('mongoose');
-const dev_db_url = 'mongodb://localhost/tc-mongo-homework';
+const dev_db_url = 'mongodb://vitalii:V1talik0@ds125302.mlab.com:25302/tc-task';
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
-mongoose.connect(mongoDB);
+mongoose.connect(dev_db_url);
 mongoose.Promise = global.Promise;
 
 const db = mongoose.connection;
